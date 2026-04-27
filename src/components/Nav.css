@@ -1,0 +1,22 @@
+nav.top {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 80;
+  padding: 18px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,0));
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; letter-spacing: -.02em; font-size: 17px;
+}
+.logo-mark {
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  filter: drop-shadow(0 0 12px rgba(198,255,61,.35));
+}
+.logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.logo-footer .logo-mark { width: 36px; height: 36px; }
+.nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--muted); }
+.nav-links a:hover { color: var(--fg); }
+.nav-cta { display: flex; align-items: center; gap: 10px; }
+@media (max-width: 800px) { .nav-links { display: none; } }

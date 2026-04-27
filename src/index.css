@@ -1,0 +1,57 @@
+:root {
+  --bg: #000;
+  --fg: #f4f4f2;
+  --muted: #8a8a85;
+  --dim: #57574f;
+  --line: #1c1c1a;
+  --line2: #2a2a27;
+  --card: #0a0a09;
+  --accent: #c6ff3d;
+  --accent-dim: #8fba23;
+  --hot: #ff3854;
+  --lift: #ff6a3d;
+  --run: #2e8fff;
+  --hiit: #e53e5a;
+  --cardio: #9e3fff;
+  --warm: #ff8a3d;
+  --cool: #2fb8a9;
+  --radius: 18px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Baloo 2', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+.serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: .24em;
+  text-transform: uppercase; color: var(--muted);
+}
+.muted { color: var(--muted); }
+.container { max-width: 1360px; margin: 0 auto; padding: 0 28px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  font-weight: 500; font-size: 14px; cursor: pointer; border: none;
+  transition: transform .2s var(--ease), background .2s, color .2s;
+}
+.btn-primary { background: var(--accent); color: #0a0a09; }
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--fg); border: 1px solid var(--line2); }
+.btn-ghost:hover { background: #111; }
+
+.noise {
+  position: fixed; inset: 0; pointer-events: none; z-index: 90;
+  opacity: .06; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .7 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
